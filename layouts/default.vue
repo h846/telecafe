@@ -50,13 +50,7 @@
 <script>
 export default {
   name: "App",
-
-  metaInfo: {
-    title: "テレカフェ",
-  },
-
   components: {},
-
   data() {
     return {
       showDrawer: false,

@@ -177,7 +177,36 @@ export default {
 
   components: {},
 
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: "テレワーク、リモートワークができるレストラン、カフェ検索",
+        },
+        {
+          hid: "og:site_name",
+          property: "og:site_name",
+          content: "テレカフェ",
+        },
+        { hid: "og:type", property: "og:type", content: "website" },
+        { hid: "og:url", property: "og:url", content: "https://telecafe.xyz" },
+        { hid: "og:title", property: "og:title", content: "テレカフェ" },
+        {
+          hid: "og:description",
+          property: "og:description",
+          content: "テレワークができるレストラン・カフェ検索",
+        },
+        { hid: "og:image", property: "og:image", content: this.ogpImage },
+      ],
+    };
+  },
+
   data: () => ({
+    title: "テレカフェ",
+    ogpImage: require("@/assets/coffee.png"),
     overlay: false,
     total_hit_count: 0,
     freeword: "",
